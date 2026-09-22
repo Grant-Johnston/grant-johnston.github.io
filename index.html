@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grant Johnston</title>
+
+<style>
+body {
+  max-width: 38rem;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #222;
+  background: #fff;
+}
+h1 { font-size: 2.2rem; margin: 0 0 .3rem; }
+h2 { font-size: 1.3rem; margin: 2.5rem 0 .8rem; padding-bottom: .4rem; border-bottom: 1px solid #ddd; }
+h3 { font-size: 1rem; margin: 1.5rem 0 .4rem; }
+p  { margin: 0 0 1rem; }
+.tagline { color: #666; margin-bottom: 1.5rem; }
+.links a { margin-right: 1.2rem; }
+a { color: #1a5f3f; }
+img { width: 100%; border: 1px solid #ddd; margin: 1rem 0 .4rem; }
+.caption { font-size: .85rem; color: #666; }
+ul { padding-left: 1.2rem; }
+li { margin-bottom: .3rem; }
+footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #ddd; font-size: .9rem; color: #666; }
+</style>
+</head>
+
+<body>
+
+<!-- ===== EDIT: your name, tagline, and links ===== -->
+<h1>Grant Johnston</h1>
+<p class="tagline">Licensing and compliance operations &middot; Fairview, Texas</p>
+<p class="links">
+  <a href="mailto:johnston.ga94@gmail.com">Email</a>
+  <a href="https://github.com/grant-johnston">GitHub</a>
+</p>
+
+<!-- ===== EDIT: two or three sentences, no more ===== -->
+<h2>What I do</h2>
+<p>I keep licensing and credentialing records accurate and current, and I build the reporting that makes gaps visible before they become findings. I work in SQL and Linux and build the reports myself.</p>
+
+
+<!-- ===== Leave this section alone until the project is done ===== -->
+<h2>Producer Licensing Compliance Tracker</h2>
+<p>An agency with producers licensed in multiple states cannot easily see who is about to lapse. This tracker answers two questions every morning: who expires in the next 60 days, and is anyone still active on a license that already expired.</p>
+
+<img src="report-screenshot.png" alt="Excel exceptions report">
+<p class="caption">The Exceptions sheet &mdash; lapsed licenses and missing credentials.</p>
+
+<h3>How it works</h3>
+<ul>
+  <li>MariaDB database on a Debian Linux server I administer</li>
+  <li>Python generates a formatted four-sheet Excel report</li>
+  <li>A cron job runs it every weekday morning</li>
+</ul>
+
+<p><a href="https://github.com/grant-johnston/licensing-compliance-tracker">View the code on GitHub</a> &mdash; uses generated test data, not real records.</p>
+
+
+<h2>Tools</h2>
+<p>SQL &middot; MariaDB &middot; Debian Linux &middot; Python &middot; Excel &middot; Producer licensing and multi-state compliance</p>
+
+
+<h2>R&eacute;sum&eacute;</h2>
+<p><a href="resume.pdf">Download r&eacute;sum&eacute; (PDF)</a></p>
+
+
+<footer>
+  Fairview, Texas &middot; <a href="mailto:johnston.ga94@gmail.com">johnston.ga94@gmail.com</a>
+</footer>
+
+</body>
+</html>
