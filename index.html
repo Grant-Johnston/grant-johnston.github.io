@@ -2,77 +2,204 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Grant Johnston</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Grant Johnston — Licensing &amp; Compliance Operations</title>
+<meta name="description" content="Insurance licensing and compliance operations. Multi-state adjuster licensing, contract compliance auditing, and the reporting that finds gaps before an auditor does.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
 <style>
-body {
-  max-width: 38rem;
-  margin: 0 auto;
-  padding: 4rem 1.5rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 17px;
-  line-height: 1.6;
-  color: #222;
-  background: #fff;
+/* ═══ PALETTE — black and white only ═══════════════════════ */
+:root {
+  --bg:   #ffffff;
+  --fg:   #000000;
+  --dim:  #6b6b6b;
+  --rule: #d8d8d8;
 }
-h1 { font-size: 2.2rem; margin: 0 0 .3rem; }
-h2 { font-size: 1.3rem; margin: 2.5rem 0 .8rem; padding-bottom: .4rem; border-bottom: 1px solid #ddd; }
-h3 { font-size: 1rem; margin: 1.5rem 0 .4rem; }
-p  { margin: 0 0 1rem; }
-.tagline { color: #666; margin-bottom: 1.5rem; }
-.links a { margin-right: 1.2rem; }
-a { color: #1a5f3f; }
-img { width: 100%; border: 1px solid #ddd; margin: 1rem 0 .4rem; }
-.caption { font-size: .85rem; color: #666; }
-ul { padding-left: 1.2rem; }
-li { margin-bottom: .3rem; }
-footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #ddd; font-size: .9rem; color: #666; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#0b0b0b; --fg:#f2f2f2; --dim:#8e8e8e; --rule:#2a2a2a; }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0 auto;
+  max-width: 41rem;
+  padding: 7rem 1.75rem 8rem;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Courier Prime", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 17px;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ═══ MASTHEAD ═════════════════════════════════════════════ */
+h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  margin: 0 0 1.1rem;
+  text-transform: uppercase;
+}
+
+.subtitle { margin: 0 0 0.2rem; }
+.place    { margin: 0 0 2.4rem; color: var(--dim); }
+
+.links { margin: 0 0 1.4rem; }
+.links a { margin-right: 1.6rem; display: inline-block; }
+
+.status {
+  display: inline-block;
+  border: 1px solid var(--fg);
+  padding: 0.15rem 0.7rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 4.5rem;
+}
+
+/* ═══ SECTIONS ═════════════════════════════════════════════ */
+section { margin-bottom: 4.5rem; }
+
+h2 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin: 0 0 1.8rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--rule);
+}
+h2 .num { color: var(--dim); font-weight: 400; margin-right: 0.9rem; }
+
+p { margin: 0 0 1.4rem; }
+p:last-child { margin-bottom: 0; }
+
+/* ═══ ENTRY LIST — hanging dash, typed-record feel ═════════ */
+.entries { margin: 0; padding: 0; list-style: none; }
+.entries li {
+  padding-left: 2.2rem;
+  text-indent: -2.2rem;
+  margin-bottom: 1.6rem;
+}
+.entries li::before { content: "—"; margin-right: 1.2rem; color: var(--dim); }
+.entries li:last-child { margin-bottom: 0; }
+
+/* ═══ FIELD ROWS — for the tools block ═════════════════════ */
+.fields { margin: 0; }
+.fields div { margin-bottom: 1.1rem; }
+.fields div:last-child { margin-bottom: 0; }
+.fields dt { color: var(--dim); }
+.fields dd { margin: 0; }
+
+/* ═══ LINKS ════════════════════════════════════════════════ */
+a { color: var(--fg); text-decoration: none; border-bottom: 1px solid var(--fg); padding-bottom: 1px; }
+a:hover { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
+
+/* ═══ FIGURE ═══════════════════════════════════════════════ */
+figure { margin: 2rem 0 0; }
+figure img { width: 100%; height: auto; display: block; border: 1px solid var(--rule); }
+figcaption { color: var(--dim); font-size: 0.85rem; margin-top: 0.8rem; }
+
+.pending { color: var(--dim); border: 1px dashed var(--rule); padding: 2.2rem 1.4rem; text-align: center; font-size: 0.85rem; }
+
+/* ═══ FOOTER ═══════════════════════════════════════════════ */
+footer {
+  border-top: 1px solid var(--rule);
+  padding-top: 1.6rem;
+  color: var(--dim);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 34rem) {
+  body { padding: 4rem 1.25rem 5rem; font-size: 16px; }
+  h1 { font-size: 1.45rem; }
+  section { margin-bottom: 3.5rem; }
+  .links a { display: block; margin: 0 0 0.6rem; }
+}
 </style>
 </head>
 
 <body>
 
-<!-- ===== EDIT: your name, tagline, and links ===== -->
+<!-- ══ MASTHEAD ══ EDIT: email and GitHub username ══════════ -->
 <h1>Grant Johnston</h1>
-<p class="tagline">Licensing and compliance operations &middot; Fairview, Texas</p>
+<p class="subtitle">Insurance licensing &amp; compliance operations</p>
+<p class="place">Dallas, Texas</p>
+
 <p class="links">
-  <a href="mailto:johnston.ga94@gmail.com">Email</a>
+  <a href="mailto:YOUR-EMAIL@gmail.com">Email</a>
   <a href="https://github.com/grant-johnston">GitHub</a>
+  <a href="resume.pdf">Résumé (PDF)</a>
 </p>
 
-<!-- ===== EDIT: two or three sentences, no more ===== -->
-<h2>What I do</h2>
-<p>I keep licensing and credentialing records accurate and current, and I build the reporting that makes gaps visible before they become findings. I work in SQL and Linux and build the reports myself.</p>
+<p class="status">Open to new roles</p>
 
 
-<!-- ===== Leave this section alone until the project is done ===== -->
-<h2>Producer Licensing Compliance Tracker</h2>
-<p>An agency with producers licensed in multiple states cannot easily see who is about to lapse. This tracker answers two questions every morning: who expires in the next 60 days, and is anyone still active on a license that already expired.</p>
-
-<img src="report-screenshot.png" alt="Excel exceptions report">
-<p class="caption">The Exceptions sheet &mdash; lapsed licenses and missing credentials.</p>
-
-<h3>How it works</h3>
-<ul>
-  <li>MariaDB database on a Debian Linux server I administer</li>
-  <li>Python generates a formatted four-sheet Excel report</li>
-  <li>A cron job runs it every weekday morning</li>
-</ul>
-
-<p><a href="https://github.com/grant-johnston/licensing-compliance-tracker">View the code on GitHub</a> &mdash; uses generated test data, not real records.</p>
+<section>
+  <h2><span class="num">01</span>Background</h2>
+  <p>I keep licensing and credentialing registers accurate, and I build the reporting that finds the gaps before an auditor does.</p>
+  <p>Most recently I ran license and contract compliance for a property and casualty claims TPA — a weekly audit confirming that every claim went to an adjuster with a current contract and a license valid in the state of loss, across a contracted field workforce of 250 or more.</p>
+</section>
 
 
-<h2>Tools</h2>
-<p>SQL &middot; MariaDB &middot; Debian Linux &middot; Python &middot; Excel &middot; Producer licensing and multi-state compliance</p>
+<section>
+  <h2><span class="num">02</span>Selected work</h2>
+  <ul class="entries">
+    <li>Built the weekly license and contract compliance audit from nothing, documented the procedure, and ran it. It caught two to five noncompliant assignments a week early on. I drove that to near zero.</li>
+    <li>Onboarded 250+ contracted adjusters and appraisers from signed contract through system access, coordinating provisioning across IT, accounting, and claims.</li>
+    <li>Reconciled adjuster records across three systems that disagreed with each other, correcting inconsistencies at volume until each contractor matched system to system.</li>
+    <li>Ran a claims queue across three Florida carrier accounts at up to 150 files a day, sustaining 60-hour weeks through catastrophe response after Hurricanes Helene and Milton.</li>
+  </ul>
+</section>
 
 
-<h2>R&eacute;sum&eacute;</h2>
-<p><a href="resume.pdf">View r&eacute;sum&eacute; (PDF)</a></p>
+<section>
+  <h2><span class="num">03</span>Currently building</h2>
+  <p>I administer a Debian Linux server and I am building the licensing register I used to keep by hand: a MariaDB schema with referential integrity constraints, a Python data layer, and a daily Excel exception report that lands on a cron schedule.</p>
+  <p>It answers two questions every morning. Who expires in the next sixty days, and is anyone still marked active on a license that already lapsed.</p>
+
+  <!-- ══ STEP 20: delete the .pending block, uncomment the figure ══ -->
+  <div class="pending">[ exception report screenshot pending ]</div>
+
+  <!--
+  <figure>
+    <img src="report-screenshot.png" alt="Exceptions sheet of the generated Excel report">
+    <figcaption>Exceptions sheet — lapsed licenses and missing credentials.</figcaption>
+  </figure>
+  <p><a href="https://github.com/grant-johnston/licensing-compliance-tracker">Source on GitHub</a> — generated test data, no real producer records.</p>
+  -->
+</section>
+
+
+<section>
+  <h2><span class="num">04</span>Tools</h2>
+  <dl class="fields">
+    <div>
+      <dt>Compliance</dt>
+      <dd>Multi-state adjuster license verification, contract compliance auditing, procedure documentation, PII handling</dd>
+    </div>
+    <div>
+      <dt>Systems</dt>
+      <dd>VCA Software, Absorb LMS, PandaDoc, JazzHR, Xactimate, Symbility, Bill.com</dd>
+    </div>
+    <div>
+      <dt>Technical</dt>
+      <dd>Excel, SQL (MariaDB), Debian Linux, SSH</dd>
+    </div>
+  </dl>
+</section>
 
 
 <footer>
-  Fairview, Texas &middot; <a href="mailto:johnston.ga94@gmail.com">johnston.ga94@gmail.com</a>
+  <p>Dallas, Texas &nbsp;·&nbsp; <a href="mailto:johnston.ga94@gmail.com">johnston.ga94@gmail.com</a></p>
 </footer>
 
 </body>
