@@ -3,12 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Grant Johnston — Licensing &amp; Compliance Operations</title>
-<meta name="description" content="Insurance licensing and compliance operations. Multi-state adjuster licensing, contract compliance auditing, and the reporting that finds gaps before an auditor does.">
+<title>Grant Johnston | Insurance Licensing &amp; Compliance Operations</title>
+<meta name="description" content="Insurance licensing and compliance operations. Compliance audits, contractor onboarding, records accuracy, and a licensing compliance tracker built in SQL and Python.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://grant-johnston.github.io/">
+<meta property="og:title" content="Grant Johnston | Insurance Licensing &amp; Compliance Operations">
+<meta property="og:description" content="Compliance audits, contractor onboarding, records accuracy, and a licensing compliance tracker built in SQL and Python.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
 
 <style>
 /* ═══ PALETTE — black and white only ═══════════════════════ */
@@ -81,6 +85,24 @@ h2 .num { color: var(--dim); font-weight: 400; margin-right: 0.9rem; }
 p { margin: 0 0 1.4rem; }
 p:last-child { margin-bottom: 0; }
 
+/* ═══ EXPERIENCE — employer, then its roles ════════════════ */
+.employer { margin-bottom: 3rem; }
+.employer:last-child { margin-bottom: 0; }
+.employer h3 {
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  line-height: 1.6;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin: 0;
+}
+.employer h3 .tenure { white-space: nowrap; }
+.meta { color: var(--dim); margin: 0 0 1.6rem; }
+.role { margin-bottom: 2.2rem; }
+.role:last-child { margin-bottom: 0; }
+.role h4 { font-size: 1rem; font-weight: 700; line-height: 1.5; margin: 0 0 1rem; }
+
 /* ═══ ENTRY LIST — hanging dash, typed-record feel ═════════ */
 .entries { margin: 0; padding: 0; list-style: none; }
 .entries li {
@@ -91,7 +113,7 @@ p:last-child { margin-bottom: 0; }
 .entries li::before { content: "—"; margin-right: 1.2rem; color: var(--dim); }
 .entries li:last-child { margin-bottom: 0; }
 
-/* ═══ FIELD ROWS — for the tools block ═════════════════════ */
+/* ═══ FIELD ROWS — skills, tools and education ═════════════ */
 .fields { margin: 0; }
 .fields div { margin-bottom: 1.1rem; }
 .fields div:last-child { margin-bottom: 0; }
@@ -106,9 +128,10 @@ a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
 /* ═══ FIGURE ═══════════════════════════════════════════════ */
 figure { margin: 2rem 0 0; }
 figure img { width: 100%; height: auto; display: block; border: 1px solid var(--rule); }
+figure a { display: block; border-bottom: 0; padding: 0; }
+figure a:hover { background: none; }
 figcaption { color: var(--dim); font-size: 0.85rem; margin-top: 0.8rem; }
-
-.pending { color: var(--dim); border: 1px dashed var(--rule); padding: 2.2rem 1.4rem; text-align: center; font-size: 0.85rem; }
+figure + p { margin-top: 1.4rem; }
 
 /* ═══ FOOTER ═══════════════════════════════════════════════ */
 footer {
@@ -129,7 +152,7 @@ footer {
 
 <body>
 
-<!-- ══ MASTHEAD ══ EDIT: email and GitHub username ══════════ -->
+<!-- ══ MASTHEAD ═════════════════════════════════════════════ -->
 <h1>Grant Johnston</h1>
 <p class="subtitle">Insurance Licensing &amp; Compliance Operations</p>
 <p class="place">Dallas, Texas</p>
@@ -144,52 +167,109 @@ footer {
 
 
 <section>
-  <h2><span class="num">01</span>Background</h2>
-  <p>I keep licensing and credentialing registers accurate, and I build the reporting that finds the gaps before an auditor does.</p>
-  <p>Most recently I ran license and contract compliance for a property and casualty claims TPA — a weekly audit confirming that every claim went to an adjuster with a current contract and a license valid in the state of loss, across a contracted field workforce of 250 or more.</p>
+  <h2><span class="num">01</span>About</h2>
+  <p>I'm good at two things that don't usually go together: moving through a lot of work fast, and not getting sloppy while I do it.</p>
+  <p>Most recently I spent over a year at a property and casualty claims TPA. I started on contract, working up to 150 claims a day during catastrophe response after Hurricanes Helene and Milton. Then, as claims operations administrator, I developed and ran the weekly license and contract compliance audit and onboarded 250+ contracted adjusters and appraisers. I also handled contract routing, system access, contractor records, and recruiting support.</p>
+  <p>I learn by building. I've been teaching myself Linux, SQL, and some Python by setting up a server at home and building the licensing tracker below, which automates the kind of license check I used to run by hand.</p>
+  <p>Next, I want work where accuracy matters and data is part of the job: licensing, compliance, operations, data quality, or reporting.</p>
 </section>
 
 
 <section>
-  <h2><span class="num">02</span>Selected work</h2>
-  <ul class="entries">
-    <li>Built the weekly license and contract compliance audit from nothing, documented the procedure, and ran it. It caught two to five noncompliant assignments a week early on. I drove that to near zero.</li>
-    <li>Onboarded 250+ contracted adjusters and appraisers from signed contract through system access, coordinating provisioning across IT, accounting, and claims.</li>
-    <li>Reconciled adjuster records across three systems that disagreed with each other, correcting inconsistencies at volume until each contractor matched system to system.</li>
-    <li>Ran a claims queue across three Florida carrier accounts at up to 150 files a day, sustaining 60-hour weeks through catastrophe response after Hurricanes Helene and Milton.</li>
-  </ul>
+  <h2><span class="num">02</span>Experience</h2>
+  <div class="employer">
+    <h3>Complex Claims Management Solutions, LLC&nbsp; <span class="tenure">·&nbsp; 1&nbsp;yr&nbsp;1&nbsp;mo</span></h3>
+    <p class="meta">Property and casualty claims TPA, Dunedin, Florida. Fully remote.</p>
+
+    <div class="role">
+      <h4>Claims Operations Administrator</h4>
+      <ul class="entries">
+        <li>Developed, ran, and documented the weekly license and contract compliance audit: pulled the prior week's claim assignments from VCA and checked each adjuster's contract status and license in the state of loss.</li>
+        <li>Caught 2 to 5 noncompliant assignments a week early on and drove the rate to near zero. I resolved most by collecting current license documentation or issuing a replacement contract through PandaDoc, and tracked and escalated the rest to the HR Director, then the Claims Director, on a set schedule.</li>
+        <li>Onboarded 250+ contracted adjusters and appraisers from signed contract to system access, coordinating VCA, Bill.com, and Absorb LMS setup with IT, accounting, and claims.</li>
+        <li>Owned the careers inbox, where returned contracts and information sheets with personal and licensing data came in, and kept job postings current in JazzHR.</li>
+        <li>Cleaned up adjuster records across VCA, OneDrive, and Absorb LMS until each contractor's information matched system to system.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <h4>Claims Specialist (Contract)</h4>
+      <ul class="entries">
+        <li>Managed the claims queue for three Florida carrier accounts, advancing up to 150 claims a day and prioritizing files to meet carrier service expectations.</li>
+        <li>Sustained 60+ hour weeks through peak catastrophe response after Hurricanes Helene and Milton.</li>
+        <li>Coordinated with claims management, field adjusters, and carriers to clear documentation bottlenecks across VCA, Xactimate, and Symbility.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="employer">
+    <h3>Arch Staffing / Fish City Grill&nbsp; <span class="tenure">·&nbsp; 4&nbsp;yrs</span></h3>
+    <p class="meta">Event staffing and restaurant operations. Allen, Texas.</p>
+    <ul class="entries">
+      <li>Ran event operations, kitchen, and guest service for 100+ customers a shift.</li>
+    </ul>
+  </div>
 </section>
 
 
 <section>
-  <h2><span class="num">03</span>Currently building</h2>
-  <p>I administer a Debian Linux server and I am building the licensing register I used to keep by hand: a MariaDB schema with referential integrity constraints, a Python data layer, and a weekly Excel exception report that lands on a cron schedule.</p>
-  <p>It answers two questions every Monday morning. Who expires in the next ninety days, and is anyone still marked active on a license that already lapsed.</p>
+  <h2><span class="num">03</span>Projects</h2>
+  <p><strong>Licensing compliance tracker.</strong> I built a producer licensing register in MariaDB, filled with generated test data, on a Debian Linux server I set up and run at home. Every Monday at 6 AM, cron runs a Python script that builds a four-tab Excel report: a dashboard, licenses expiring in the next 90 days, exceptions, and the full roster.</p>
+  <p>The exceptions tab answers two questions an audit asks: is any license still marked active after it lapsed, and is any active producer missing a license?</p>
 
   <figure>
-    <img src="report-screenshot.png" alt="Exceptions sheet of the generated Excel report">
-    <figcaption>Exceptions sheet — lapsed licenses and missing credentials.</figcaption>
+    <a href="report-screenshot.png"><img src="report-screenshot.png" alt="Exceptions tab of the Excel report, listing lapsed licenses still marked active and producers with no license on file"></a>
+    <figcaption>Exceptions tab: lapsed licenses still marked active, and active producers with no license on file.</figcaption>
   </figure>
-  <p><a href="https://github.com/grant-johnston/licensing-compliance-tracker">Source on GitHub</a> — generated test data, no real producer records.</p>
+  <p><a href="https://github.com/grant-johnston/licensing-compliance-tracker">Source on GitHub</a>. Generated test data, no real producer records.</p>
 </section>
 
 
 <section>
-  <h2><span class="num">04</span>Tools</h2>
+  <h2><span class="num">04</span>Skills and tools</h2>
   <dl class="fields">
     <div>
       <dt>Compliance</dt>
-      <dd>Multi-state adjuster license verification, contract compliance auditing, procedure documentation, PII handling</dd>
+      <dd>License and contract compliance auditing, multi-state adjuster license verification, procedure documentation, PII handling</dd>
+    </div>
+    <div>
+      <dt>Operations</dt>
+      <dd>Contractor onboarding, contract routing, applicant tracking, system access provisioning, cross-system record cleanup, LMS administration</dd>
     </div>
     <div>
       <dt>Systems</dt>
-      <dd>VCA Software, Absorb LMS, PandaDoc, JazzHR, Xactimate, Symbility, Bill.com</dd>
+      <dd>VCA Software, Absorb LMS, PandaDoc, JazzHR, Xactimate, Symbility, Bill.com, Microsoft 365</dd>
     </div>
     <div>
       <dt>Technical</dt>
-      <dd>Excel, SQL (MariaDB), Debian Linux, SSH</dd>
+      <dd>Excel, SQL (MariaDB), Debian Linux, SSH, cron, Git, GitHub</dd>
+    </div>
+    <div>
+      <dt>Learning</dt>
+      <dd>Python</dd>
     </div>
   </dl>
+</section>
+
+
+<section>
+  <h2><span class="num">05</span>Education</h2>
+  <dl class="fields">
+    <div>
+      <dt>Stephen F. Austin State University</dt>
+      <dd>Coursework toward a B.S. in Data Analytics</dd>
+    </div>
+    <div>
+      <dt>Collin College</dt>
+      <dd>A.A. in General Studies</dd>
+    </div>
+  </dl>
+</section>
+
+
+<section>
+  <h2><span class="num">06</span>Hobbies</h2>
+  <p>I play basketball, exercise every day, play guitar, and read. I'm also learning programming and how computer systems work. In the fall it's the Longhorns on Saturdays and the Cowboys on Sundays.</p>
 </section>
 
 
